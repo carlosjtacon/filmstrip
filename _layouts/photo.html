@@ -10,7 +10,12 @@ layout: default
 {% assign photo_number = page.title | plus: 0 %}
 {% assign next_photo_number = photo_number | plus: 1 %}
 {% assign previous_photo_number = photo_number | minus: 1 %}
-{% assign total_photos = site.photos | size %}
+{% assign total_photos = 0 %}
+{% for photo in site.photos %}
+{% if photo.camera == page.camera %}
+    {% assign total_photos = total_photos | plus: 1 %}
+{% endif %}
+{% endfor %}
 
 {% if previous_photo_number == 0 %}
     {% assign previous_photo_number = photo_number%}
