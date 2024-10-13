@@ -54,11 +54,6 @@ p + p {
     color: var(--colorGrey);
 }
 
-.row  { display: flex; }
-.col2 { flex:50%; }
-.col3 { flex:33%; }
-.col4 { flex:25%; }
-
 .header {
     padding: 5px;
     width: 100%;
@@ -124,7 +119,12 @@ p + p {
     margin-top: 1em;
 }
 
-.cover:hover {
+.cover img {
+    display: block;
+    max-width: 100%;
+}
+
+.cover img:hover {
     filter: brightness(1.25) saturate(2);
 }
 
