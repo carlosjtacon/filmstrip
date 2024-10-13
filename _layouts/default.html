@@ -1,26 +1,6 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-
-    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
-    
-    <meta name="theme-color" content="#1c1c1c"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-    <link rel="preload" href="/assets/fonts/hubot_sans/Hubot-Sans.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/images/fx3_color.webp" as="image" type="image/webp" crossorigin>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-
-    <meta property="og:title" content="{{page.title}}">
-    <meta property="og:description" content="{{page.photo_filename}}">
-    <meta property="og:image" content="{% if page.photo_filename %}{{site.url}}/assets/photos/{{page.camera}}/{{page.photo_filename}}-thumb.webp{%endif%}">
-    <meta property="og:url" content="{{site.url}}{{page.url}}">
-  </head>
-  <body>
-      {{ content }}
-  </body>
-</html>
+---
+layout: base
+---
+<body>
+    {{ content }}
+</body>
