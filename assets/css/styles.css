@@ -54,6 +54,20 @@ p + p {
     color: var(--colorGrey);
 }
 
+.title {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2em;
+    margin: 2em auto 1em auto;
+}
+
+.grid { 
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100vw;
+}
+
 .header {
     padding: 5px;
     width: 100%;
@@ -120,7 +134,6 @@ p + p {
 }
 
 .cover img {
-    display: block;
     max-width: 100%;
 }
 
@@ -191,5 +204,13 @@ p + p {
         font-size: 1.15em;;
         position: relative;
         float: right;
+    }
+
+    .title {
+        margin: auto;
+    }
+
+    .grid { 
+        grid-template-columns: 50vw 50vw;
     }
 }
