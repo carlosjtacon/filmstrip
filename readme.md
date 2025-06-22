@@ -19,5 +19,4 @@ To add new photos:
 
 
 To-do:
-- Create disponsable camera section
-- camera story page, maybe just write under the FX-3 camera page as content
+- Camera story page, maybe just write under the FX-3 camera page as content
