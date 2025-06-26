@@ -8,18 +8,19 @@ layout: default
     </div>
 </a>
 
-{% assign anim_wait = 5000 %}
+{% assign anim_wait_boot = 3600 %}
+{% assign anim_wait_develop = 4500 %}
 {% assign anim_perpicture = 150 %}
 <div class="progress-bar">
-    <span class="progress-bar-boot" style="animation-duration: {{anim_wait}}ms;"></span>
-    <span class="progress-bar-develop" style="animation-delay: {{anim_wait}}ms; animation-duration: {{site.photos | size | times: anim_perpicture}}ms;"></span>
+    <span class="progress-bar-boot" style="animation-duration: {{anim_wait_boot}}ms;"></span>
+    <span class="progress-bar-develop" style="animation-delay: {{anim_wait_develop}}ms; animation-duration: {{site.photos | size | times: anim_perpicture}}ms;"></span>
 </div>
 
 {% assign site_photos = site.photos | reverse | where: "camera", page.camera %}
 {% for photo in site_photos %}
 <div class="thumbnail">
     <a href="{{photo.url}}">
-        <img style="animation-delay: {{ forloop.index | times: anim_perpicture | plus: anim_wait }}ms;" src="/assets/photos/{{page.camera}}/{{photo.photo_filename}}-thumb.webp"/>
+        <img style="animation-delay: {{ forloop.index | times: anim_perpicture | plus: anim_wait_develop }}ms;" src="/assets/photos/{{page.camera}}/{{photo.photo_filename}}-thumb.webp"/>
     </a>
 </div>
 {% endfor %}

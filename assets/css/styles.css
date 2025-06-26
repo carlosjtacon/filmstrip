@@ -160,7 +160,7 @@ p + p {
     height: 100%;
     background-color: var(--colorAccentOrange);
     animation-name: progress_boot;
-    animation-timing-function: steps(10, end);
+    animation-timing-function: steps(4, end);
     animation-fill-mode: both;
 }
 .progress-bar-develop {
@@ -174,12 +174,12 @@ p + p {
 
 @keyframes progress_boot {
     from { width: 0%; }
-    to { width: 75%; }
+    to { width: 25%; }
 }
 
 @keyframes progress_develop {
     from { width: 0%; }
-    to { width: 25%; }
+    to { width: 75%; }
 }
 
 /* DESKTOP OVERRIDES */
